@@ -15,7 +15,7 @@ import com.example.demo.model.User;
 public interface FruitsMapper {
 	
 	@Select("SELECT * FROM fruits WHERE id = #{id}")
-    public User findOne(Integer id);
+    public User findOne(@Param("id") Integer id);
     
     @Select("SELECT * FROM fruits")
     public List<User> find();
@@ -28,5 +28,5 @@ public interface FruitsMapper {
     		@Param("name") String name, @Param("price") Integer price);
     
     @Delete("DELETE FROM fruits WHERE id = #{id}")
-    public void deleteOne(Integer id);
+    public void deleteOne(@Param("id") Integer id);
 }
