@@ -49,4 +49,9 @@ public class User {
 		this.price = price;
 	}
 	
+	public User(Integer id, String name, Integer price) {
+		this.name = name;
+		this.id = id;
+		this.price = price;
+	}
 }
