@@ -1,3 +1,4 @@
+delete from fruits;
 INSERT IGNORE INTO fruits(id, name, price)
 	values
 		(1, 'apple', 120),

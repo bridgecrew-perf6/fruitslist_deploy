@@ -10,27 +10,27 @@ import com.example.demo.repository.FruitsMapper;
 
 @Service
 public class FruitsService {
-	
+
 	@Autowired
 	FruitsMapper mapper;
 
-    public User getUserOne(Integer id) {
-        return mapper.findOne(id);
-    }
-    
-    public List<User> getList() {
-        return mapper.find();
-    }
+	public List<User> getList() {
+		return mapper.find();
+	}
 
-    public void insertOne(User u) {
-        mapper.insertOne(u);
-    }
+	public User getUserOne(Integer id) {
+		return mapper.findOne(id);
+	}
 
-    public void updateOne(Integer id, String name, Integer price) {
-        mapper.updateOne(id, name, price);
-    }
+	public void insertOne(User u) {
+		mapper.insertOne(u);
+	}
 
-    public void deleteOne(Integer id) {
-        mapper.deleteOne(id);
-    }
+	public void updateOne(Integer id, String name, Integer price) {
+		mapper.updateOne(id, name, price);
+	}
+
+	public void deleteOne(Integer id) {
+		mapper.deleteOne(id);
+	}
 }
